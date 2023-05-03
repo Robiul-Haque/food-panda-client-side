@@ -10,9 +10,9 @@ const Header = () => {
                     <h2>FoodPanda</h2>
                 </div>
                 <div>
-                    <Link to="/" className='text-secondary text-decoration-none fw-semibold me-4'>Home</Link>
-                    <Link to="/blog" className='text-secondary text-decoration-none fw-semibold'>Blog</Link>
-                    <button className='btn btn-dark ms-4'>Login</button>
+                    <Link to="/" className='text-secondary text-decoration-none fw-semibold'>Home</Link>
+                    <Link to="/blog" className='text-secondary text-decoration-none fw-semibold mx-5'>Blog</Link>
+                    <Link to="/login" className='text-secondary text-decoration-none fw-semibold'>Login</Link>
                 </div>
             </div>
         </div>
