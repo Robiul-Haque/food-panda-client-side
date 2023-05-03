@@ -5,6 +5,9 @@ import slider_1 from '../assets/slider-1.jpg';
 import slider_2 from '../assets/slider-2.jpg';
 import slider_3 from '../assets/slider-3.jpg';
 import image_1 from '../assets/image-1.jpg';
+import breakfast from '../assets/breakfast.jpg';
+import lunch from '../assets/lunch.jpg';
+import dinner from '../assets/dinner.jpg';
 
 const Home = () => {
     return (
@@ -60,8 +63,25 @@ const Home = () => {
                         <img src="https://blog.cookeatdiscover.com/content/images/2021/03/CPG_POLENTA_59-1.jpg" alt="image-2" className='rounded img-fluid' />
                     </div>
                     <div className='w-50'>
-                        <h1>World Famous Chef</h1>
+                        <h2>World Famous Chef</h2>
                         <p>Cook Eat Discover was thrilled to speak to Francesco Mazzei, who has become a staple not just of the high-end UK restaurant scene, but on our TV screens too. He told us about his childhood, inspirations, current projects, death-row meal, and even provided us with a special recipe for the feature</p>
+                    </div>
+                </div>
+            </div>
+            <div className='container mt-5 pt-5'>
+                <h2 className='text-center my-5'>What We Offer</h2>
+                <div className='d-flex justify-content-evenly align-items-center'>
+                    <div>
+                        <img src={breakfast} alt="breakfast-image" className='img-fluid' />
+                        <h5 className='text-center mt-4'>Breakfast</h5>
+                    </div>
+                    <div>
+                    <img src={lunch} alt="breakfast-image" className='img-fluid' />
+                        <h5 className='text-center mt-4'>Lunch</h5>
+                    </div>
+                    <div>
+                    <img src={dinner} alt="breakfast-image" className='img-fluid'  />
+                        <h5 className='text-center mt-4'>Dinner</h5>
                     </div>
                 </div>
             </div>
