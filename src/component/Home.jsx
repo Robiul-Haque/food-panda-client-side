@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider_1 from '../assets/slider-1.jpg';
 import slider_2 from '../assets/slider-2.jpg';
 import slider_3 from '../assets/slider-3.jpg';
+import image_1 from '../assets/image-1.jpg';
 
 const Home = () => {
     return (
@@ -44,6 +45,7 @@ const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
+            
         </>
     );
 };
