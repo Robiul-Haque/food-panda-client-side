@@ -12,7 +12,8 @@ const Header = () => {
                 <div>
                     <Link to="/" className='text-secondary text-decoration-none fw-semibold'>Home</Link>
                     <Link to="/blog" className='text-secondary text-decoration-none fw-semibold mx-5'>Blog</Link>
-                    <Link to="/login" className='text-secondary text-decoration-none fw-semibold'>Login</Link>
+                    <Link to="/login" className='text-secondary text-decoration-none fw-semibold me-5'>Login</Link>
+                    <Link to="/registration" className='text-secondary text-decoration-none fw-semibold'>Registration</Link>
                 </div>
             </div>
         </div>

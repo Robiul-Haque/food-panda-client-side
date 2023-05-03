@@ -7,6 +7,7 @@ import Home from './component/Home.jsx'
 import Blog from './component/Blog.jsx'
 import ErrorPage from './component/ErrorPage.jsx'
 import Login from './component/Login.jsx'
+import Registration from './component/Registration.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,16 +17,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>,
+        element: <Home></Home>
       },
       {
         path: '/blog',
-        element: <Blog></Blog>,
+        element: <Blog></Blog>
       },
       {
         path: '/login',
-        element: <Login></Login>,
+        element: <Login></Login>
       },
+      {
+        path: '/registration',
+        element: <Registration></Registration>
+      }
     ]
   }
 ]);
