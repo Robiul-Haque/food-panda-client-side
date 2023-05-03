@@ -48,7 +48,7 @@ const Home = () => {
             <div className='container mt-5 pt-5'>
                 <div className='d-flex justify-content-center align-items-center gap-5 mt-5'>
                     <div className='w-50'>
-                        <h1>Good Food & Healthy Food</h1>
+                        <h2>Good & Healthy Food</h2>
                         <p>Rice and noodles are staples in many Chinese dishes, often paired with vegetables, meat, or seafood. Soy sauce, oyster sauce, and hoisin sauce are common flavorings, while garlic, ginger, and scallions add depth to many dishes</p>
                     </div>
                     <div className='w-50'>
