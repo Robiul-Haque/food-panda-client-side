@@ -45,7 +45,26 @@ const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            
+            <div className='container mt-5 pt-5'>
+                <div className='d-flex justify-content-center align-items-center gap-5 mt-5'>
+                    <div className='w-50'>
+                        <h1>Good Food & Healthy Food</h1>
+                        <p>Rice and noodles are staples in many Chinese dishes, often paired with vegetables, meat, or seafood. Soy sauce, oyster sauce, and hoisin sauce are common flavorings, while garlic, ginger, and scallions add depth to many dishes</p>
+                    </div>
+                    <div className='w-50'>
+                        <img src={image_1} alt="image-1" className='rounded img-fluid' />
+                    </div>
+                </div>
+                <div className='d-flex justify-content-center align-items-center gap-5 mt-5'>
+                    <div className='w-50'>
+                        <img src="https://blog.cookeatdiscover.com/content/images/2021/03/CPG_POLENTA_59-1.jpg" alt="image-2" className='rounded img-fluid' />
+                    </div>
+                    <div className='w-50'>
+                        <h1>World Famous Chef</h1>
+                        <p>Cook Eat Discover was thrilled to speak to Francesco Mazzei, who has become a staple not just of the high-end UK restaurant scene, but on our TV screens too. He told us about his childhood, inspirations, current projects, death-row meal, and even provided us with a special recipe for the feature</p>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
