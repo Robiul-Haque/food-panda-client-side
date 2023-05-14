@@ -5,14 +5,25 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.local_apiKey,
-  authDomain: import.meta.env.local_authDomain,
-  projectId: import.meta.env.local_projectId,
-  storageBucket: import.meta.env.local_storageBucket,
-  messagingSenderId: import.meta.env.local_messagingSenderId,
-  appId: import.meta.env.local_appId
+  apiKey: import.meta.env.VITE_local_apiKey,
+  authDomain: import.meta.env.VITE_local_authDomain,
+  projectId: import.meta.env.VITE_local_projectId,
+  storageBucket: import.meta.env.VITE_local_storageBucket,
+  messagingSenderId: import.meta.env.VITE_local_messagingSenderId,
+  appId: import.meta.env.VITE_local_appId
 };
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCBU_IYhq_8CL4ZRyQnRjnsFSI2y5koi2Q",
+//   authDomain: "phero-assigment-10-foodpanda.firebaseapp.com",
+//   projectId: "phero-assigment-10-foodpanda",
+//   storageBucket: "phero-assigment-10-foodpanda.appspot.com",
+//   messagingSenderId: "1093149444921",
+//   appId: "1:1093149444921:web:3e22612e285daafb5ef6e8"
+// };
 
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+export default app;

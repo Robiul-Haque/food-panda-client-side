@@ -3,7 +3,7 @@ import { Accordion, Container } from 'react-bootstrap';
 
 const Blog = () => {
     return (
-        <Container className='d-flex justify-content-center align-item-center my-5 py-5'>
+        <Container className='d-flex justify-content-center align-item-center my-md-5 py--5'>
             <Accordion defaultActiveKey="0" className='my-5 py-5'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Tell us the differences between uncontrolled and controlled components</Accordion.Header>
