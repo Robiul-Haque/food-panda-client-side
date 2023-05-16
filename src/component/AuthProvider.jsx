@@ -5,7 +5,7 @@ import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState();
+    const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const auth = getAuth(app);
@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
         })
 
         return () => {
-            unSubscribe();
+            return unSubscribe();
         }
     })
 

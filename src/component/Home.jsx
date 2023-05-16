@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider_1 from '../assets/slider-1.jpg';
 import slider_2 from '../assets/slider-2.jpg';
 import slider_3 from '../assets/slider-3.jpg';
+import slider_4 from '../assets/slider-4.jpg';
 import image_1 from '../assets/image-1.jpg';
 import image_2 from '../assets/image-2.jpg'
 import breakfast from '../assets/breakfast.jpg';
@@ -44,6 +45,17 @@ const Home = () => {
 
                     <Carousel.Caption>
                         <h4>Round White and Blue Ceramic Bowl With Cooked Ball Soup and Brown Wooden Chopsticks</h4>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 mx-auto custom-responsive-img"
+                        src={slider_4}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h4>Nerfee Mirandilla</h4>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

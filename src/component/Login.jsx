@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import app from '../FireBase.config';
 import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
@@ -8,6 +8,9 @@ const Login = () => {
 
     const [successMessage, setSuccessMessage] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
+    const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
 
     const googleProvider = new GoogleAuthProvider();
     const gitHubProvider = new GithubAuthProvider();
@@ -18,20 +21,31 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        form.reset();
+        setSuccessMessage('');
+        setErrorMessage('');
 
         signInWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
-                const user = userCredential.user;
+                // const user = userCredential.user;
                 // console.log(user);
+                navigate(from, { replace: true });
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error);
+                setErrorMessage(error.message);
+            })
     }
 
     const googleLogin = () => {
+        setSuccessMessage('');
+        setErrorMessage('');
+
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 // console.log(result.user);
                 setSuccessMessage('Google login successful');
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
@@ -40,9 +54,14 @@ const Login = () => {
     }
 
     const gitHubLogin = () => {
+        setSuccessMessage('');
+        setErrorMessage('');
+
         signInWithPopup(auth, gitHubProvider)
             .then(result => {
                 // console.log(result.user);
+                setSuccessMessage('GitHub login successful');
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message);

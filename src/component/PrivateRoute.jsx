@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Navigate } from 'react-router';
 
 const PrivateRoute = ({ children }) => {
 
@@ -13,11 +14,11 @@ const PrivateRoute = ({ children }) => {
         </div>
     }
 
-    if (user) {
+    if (user?.email) {
         return children;
-    } else {
-        <Navigate to="/login" state={{ from: location }} replace={true}></Navigate>
     }
+
+    return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
 };
 
 export default PrivateRoute;

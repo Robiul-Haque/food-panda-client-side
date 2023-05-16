@@ -20,7 +20,9 @@ const Registration = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
-        event.target.reset();
+        form.reset();
+        setSuccessMessage('');
+        setErrorMessage('');
 
         createUserWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
@@ -34,6 +36,9 @@ const Registration = () => {
     }
 
     const updateUSer = (user, name, photo) => {
+        setSuccessMessage('');
+        setErrorMessage('');
+
         updateProfile(user, {
             displayName: name,
             photoURL: photo
